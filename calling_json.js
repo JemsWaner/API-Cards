@@ -15,7 +15,6 @@ const BUTTON = document.getElementById("button");
 /////////// linking button and input number\\\\\
 BUTTON.addEventListener("click", async () => {
   let randomNum = INPUT.value;
-  let random = Math.floor(Math.random() * randomNum);
 
   const DIV = document.createElement("div");
   const UL = document.createElement("ul");
@@ -35,7 +34,7 @@ BUTTON.addEventListener("click", async () => {
     }
   }
 
-  for (let i = 1; i <= random; i++) {
+  for (let i = 1; i <= randomNum; i++) {
     const LI = document.createElement("li");
     const IMG = document.createElement("img");
     IMG.src = await callingApi(
